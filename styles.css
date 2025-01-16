@@ -409,6 +409,25 @@ footer {
     }
 }
 
+/* Why: Make contact links interactive while maintaining terminal look */
+.output a {
+    color: var(--text);
+    text-decoration: none;
+    position: relative;
+    cursor: pointer
+}
+
+.output a:hover {
+    color: var(--header)
+}
+
+.output a:hover::before {
+    content: "→";
+    position: absolute;
+    left: -1.2em;
+    color: var(--header)
+}
+
 /* Why: Selection styling */
 ::selection {
     background: var(--text);
